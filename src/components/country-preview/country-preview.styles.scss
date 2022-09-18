@@ -31,19 +31,19 @@
       font-size: 20px;
       margin-bottom: 15px;
     }
+  }
+}
 
-    .detail-pair {
-      display: flex;
-      align-items: center;
+.detail-pair {
+  display: flex;
+  align-items: center;
 
-      &:not(:last-child) {
-        margin-bottom: 3px;
-      }
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
 
-      .detail-bold {
-        font-weight: 600;
-        margin-right: 5px;
-      }
-    }
+  .detail-bold {
+    font-weight: 600;
+    margin-right: 5px;
   }
 }

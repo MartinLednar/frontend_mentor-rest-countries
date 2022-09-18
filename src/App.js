@@ -3,6 +3,7 @@ import { CountriesContext } from "./contexts/countries/countries.context";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation/navigation.component";
 import MainPage from "./components/main-page/main-page.component";
+import CountryPage from "./components/country-page/country-page.component";
 import "./App.css";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/skuska" element={<h1>Muska</h1>} />
+        <Route path="/country/:id" element={<CountryPage />} />
       </Routes>
     </div>
   );

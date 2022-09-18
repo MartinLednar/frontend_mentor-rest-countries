@@ -1,0 +1,35 @@
+.country-container {
+  height: calc(100vh - 82px);
+  padding: 60px 50px 0;
+
+  .country-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+
+    img {
+      width: 100%;
+    }
+
+    .country-description {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+      }
+
+      .details-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .neighbours-box {
+        a {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
