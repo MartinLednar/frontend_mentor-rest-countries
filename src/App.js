@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { CountriesContext } from "./contexts/countries/countries.context";
+import { ThemeContext } from "./contexts/theme/theme.context";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation/navigation.component";
 import MainPage from "./components/main-page/main-page.component";
@@ -8,6 +9,7 @@ import "./App.css";
 
 function App() {
   const { setCountries } = useContext(CountriesContext);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const getCountries = async () => {
@@ -25,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${theme && "dark"}`}>
       <Navigation />
       <Routes>
         <Route path="/" element={<MainPage />} />

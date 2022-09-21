@@ -18,12 +18,12 @@ const CountryPreview = ({ countryData: { flag, name, population, region, capital
 
         <div className="detail-pair">
           <p className="detail-bold">Region:</p>
-          <p>{region}</p>
+          <p>{region ? region : "None"}</p>
         </div>
 
         <div className="detail-pair">
           <p className="detail-bold">Capital:</p>
-          <p>{capital}</p>
+          <p>{capital ? capital : "None"}</p>
         </div>
       </div>
     </Link>

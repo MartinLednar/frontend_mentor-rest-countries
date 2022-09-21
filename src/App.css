@@ -1,3 +1,10 @@
 .app-container {
   background-color: var(--lm-bg);
+  overflow-x: hidden;
+  color: var(--lm-text);
+}
+
+.app-container.dark {
+  background-color: var(--dm-bg);
+  color: white;
 }

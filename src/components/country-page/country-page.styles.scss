@@ -7,27 +7,58 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
+    min-height: max-content;
 
-    img {
+    .flag-wrapper {
       width: 100%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        display: block;
+      }
     }
 
     .country-description {
       display: flex;
       flex-direction: column;
+      justify-content: center;
 
       h2 {
+        font-size: 30px;
       }
 
       .details-grid {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        font-size: 18px;
+        margin: 30px 0 50px;
+
+        .detail-pair:not(:last-child) {
+          margin-bottom: 8px;
+        }
       }
 
       .neighbours-box {
-        a {
-          margin-left: 20px;
+        font-size: 18px;
+
+        .detail-pair {
+          .detail-bold {
+            width: max-content;
+            margin-right: 10px;
+          }
+
+          p:last-child {
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            width: min-content;
+            a {
+              margin-left: 20px;
+              min-width: max-content;
+            }
+          }
         }
       }
     }
