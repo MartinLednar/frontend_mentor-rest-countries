@@ -23,6 +23,10 @@
       flex-direction: column;
       justify-content: center;
 
+      &.dark {
+        color: var(--dm-text-lm-elements);
+      }
+
       h2 {
         font-size: 30px;
       }
@@ -55,7 +59,7 @@
             row-gap: 10px;
             width: min-content;
             a {
-              margin-left: 20px;
+              margin-left: 10px;
               min-width: max-content;
             }
           }

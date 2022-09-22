@@ -15,6 +15,12 @@
   align-items: center;
   justify-content: center;
 
+  &.dark {
+    h2 {
+      color: white;
+    }
+  }
+
   h2 {
     font-weight: 300;
     color: var(--lm-text);

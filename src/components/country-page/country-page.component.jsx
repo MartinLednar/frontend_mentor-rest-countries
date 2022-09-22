@@ -3,6 +3,7 @@ import { ChevronLeft } from "react-feather";
 import { useParams } from "react-router-dom";
 import CustomLink from "../custom-link/custom-link.component";
 import { CountriesContext } from "../../contexts/countries/countries.context";
+import { ThemeContext } from "../../contexts/theme/theme.context";
 import Spinner from "../spinner/spinner.component";
 import "./country-page.styles.scss";
 
@@ -11,6 +12,7 @@ const CountryPage = () => {
   const [neighbours, setNeighbours] = useState(null);
   const { id } = useParams();
   const { countries } = useContext(CountriesContext);
+  const { theme } = useContext(ThemeContext);
 
   const getCountry = (id) => countries.filter((country) => country.alpha3Code === id)[0];
 
@@ -31,7 +33,7 @@ const CountryPage = () => {
 
   return (
     <div className="country-container">
-      <CustomLink path="/">
+      <CustomLink path="/" theme={theme}>
         <ChevronLeft /> Back
       </CustomLink>
       {country ? (
@@ -39,7 +41,7 @@ const CountryPage = () => {
           <div className="flag-wrapper">
             <img src={country.flag} alt="Country Flag" />
           </div>
-          <div className="country-description">
+          <div className={`country-description ${theme ? "dark" : ""}`}>
             <h2>{country.name}</h2>
             <div className="details-grid">
               <div className="details-left">
@@ -91,7 +93,7 @@ const CountryPage = () => {
                   <p className="detail-bold">Border countries:</p>
                   <p>
                     {neighbours.map((neighbour, i) => (
-                      <CustomLink key={i} path={`/country/${neighbour.alpha3Code}`}>
+                      <CustomLink key={i} path={`/country/${neighbour.alpha3Code}`} theme={theme}>
                         {neighbour.name}
                       </CustomLink>
                     ))}

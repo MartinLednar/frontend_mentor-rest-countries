@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./custom-link.styles.scss";
 
-const CustomLink = ({ children, path }) => (
-  <Link className="custom-link" to={path}>
+const CustomLink = ({ children, path, theme }) => (
+  <Link className={`custom-link ${theme ? "dark" : ""}`} to={path}>
     {children}
   </Link>
 );

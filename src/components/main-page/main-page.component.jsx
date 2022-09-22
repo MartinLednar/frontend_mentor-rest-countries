@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { CountriesContext } from "../../contexts/countries/countries.context";
+import { ThemeContext } from "../../contexts/theme/theme.context";
 import { Search } from "react-feather";
 import CountriesContainer from "../countries-container/countries-container.component";
 import CustomSelect from "../custom-select/custom-select.component";
@@ -38,6 +39,7 @@ const MainPage = () => {
   const [filteredCountries, setFilteredCountries] = useState(null);
   const [filter, setFilter] = useState(defaultFilterState);
   const { countries } = useContext(CountriesContext);
+  const { theme } = useContext(ThemeContext);
 
   const handleChange = (e) => {
     const { name = "region", value } = e.target;
@@ -57,13 +59,13 @@ const MainPage = () => {
 
   return (
     <main>
-      <div className="search-container">
+      <div className={`search-container ${theme ? "dark" : ""}`}>
         <div className="search-box">
           <Search />
           <input type="search" name="search" onChange={handleChange} placeholder="Search for a country..." />
         </div>
 
-        <CustomSelect selectTitle="Filter by Region" options={selectOptions} changeFilter={handleChange} />
+        <CustomSelect theme={theme} selectTitle="Filter by Region" options={selectOptions} changeFilter={handleChange} />
       </div>
 
       {countries ? <CountriesContainer data={filteredCountries} /> : <Spinner />}

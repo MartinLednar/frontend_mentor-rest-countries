@@ -9,6 +9,20 @@
   cursor: pointer;
   font-size: 16px;
 
+  &.dark {
+    background-color: var(--dm-elements);
+    color: white;
+
+    .select-options {
+      background-color: var(--dm-elements);
+      color: white;
+
+      option:hover {
+        background-color: #344954;
+      }
+    }
+  }
+
   svg {
     margin-left: 20px;
     height: 20px;

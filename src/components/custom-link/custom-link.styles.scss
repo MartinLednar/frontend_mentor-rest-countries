@@ -1,7 +1,7 @@
 .custom-link {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--dm-text-lm-elements);
   width: max-content;
   padding: 8px 30px;
   text-decoration: none;
@@ -16,5 +16,10 @@
     margin-right: 5px;
     margin-left: -5px;
     border-radius: 5px;
+  }
+
+  &.dark {
+    color: var(--dm-text-lm-elements);
+    background-color: var(--dm-elements);
   }
 }

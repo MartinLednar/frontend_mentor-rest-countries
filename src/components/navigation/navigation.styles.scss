@@ -5,6 +5,15 @@ nav {
   padding: 25px 50px;
   box-shadow: 3px 0 20px rgba(0, 0, 0, 0.1);
 
+  &.dark {
+    color: white;
+    background-color: var(--dm-elements);
+
+    button {
+      color: inherit;
+    }
+  }
+
   button {
     display: flex;
     align-items: center;

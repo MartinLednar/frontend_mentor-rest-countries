@@ -11,7 +11,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav>
+    <nav className={theme ? "dark" : ""}>
       <h1>Where in the world?</h1>
       <button onClick={handleClick}>
         {theme ? (

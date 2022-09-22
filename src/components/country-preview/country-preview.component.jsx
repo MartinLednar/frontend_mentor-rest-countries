@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./country-preview.styles.scss";
 
-const CountryPreview = ({ countryData: { flag, name, population, region, capital, alpha3Code } }) => {
+const CountryPreview = ({ countryData: { flag, name, population, region, capital, alpha3Code }, theme }) => {
   return (
-    <Link to={`/country/${alpha3Code}`} className="country-preview-container">
+    <Link to={`/country/${alpha3Code}`} className={`country-preview-container ${theme ? "dark" : ""}`}>
       <div className="flag-box">
         <img src={flag} alt={`Flag of ${name}`} />
       </div>

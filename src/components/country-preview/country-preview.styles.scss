@@ -11,6 +11,11 @@
   text-decoration: none;
   color: #111517;
 
+  &.dark {
+    color: white;
+    background-color: var(--dm-elements);
+  }
+
   .flag-box {
     width: 100%;
     height: 180px;

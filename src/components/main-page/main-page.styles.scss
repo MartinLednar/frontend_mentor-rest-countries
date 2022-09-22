@@ -9,6 +9,19 @@ main {
     justify-content: space-between;
     margin: 50px 0;
 
+    &.dark {
+      .search-box {
+        color: white;
+        svg {
+          color: inherit;
+        }
+        input {
+          background-color: var(--dm-elements);
+          color: inherit;
+        }
+      }
+    }
+
     .search-box {
       display: flex;
       align-items: center;

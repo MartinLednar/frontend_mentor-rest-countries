@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "react-feather";
 import "./custom-select.styles.scss";
 
-const CustomSelect = ({ selectTitle, options, changeFilter }) => {
+const CustomSelect = ({ selectTitle, options, changeFilter, theme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeOption, setActiveOption] = useState("");
 
@@ -18,7 +18,7 @@ const CustomSelect = ({ selectTitle, options, changeFilter }) => {
   };
 
   return (
-    <div className="select-box" onClick={toggleMenu}>
+    <div className={`select-box ${theme && "dark"}`} onClick={toggleMenu}>
       {activeOption ? activeOption : selectTitle}
       <ChevronDown />
 
