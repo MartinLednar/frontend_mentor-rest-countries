@@ -7,6 +7,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
     margin: 50px 0;
 
     &.dark {
@@ -48,8 +50,11 @@ main {
         box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.108);
       }
     }
+  }
+}
 
-    select {
-    }
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0 25px 50px;
   }
 }

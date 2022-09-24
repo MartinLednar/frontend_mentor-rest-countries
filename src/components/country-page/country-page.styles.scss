@@ -68,3 +68,48 @@
     }
   }
 }
+
+@media screen and (max-width: 1330px) {
+  .details-grid {
+    grid-template-columns: 1fr !important;
+
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .country-container {
+    height: max-content;
+    padding-bottom: 60px;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr !important;
+    row-gap: 50px;
+  }
+
+  .neighbours-box {
+    .detail-pair {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+
+      p:last-child {
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr));
+        column-gap: 15px;
+
+        a {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .country-container {
+    padding: 60px 25px;
+  }
+}

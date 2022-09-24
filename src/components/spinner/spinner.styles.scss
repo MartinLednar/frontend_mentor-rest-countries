@@ -23,4 +23,9 @@
     border-radius: 50%;
     animation: loading infinite linear 0.8s;
   }
+
+  &.dark .spinner {
+    border-color: var(--dm-text-lm-elements);
+    border-top: 2px solid transparent;
+  }
 }

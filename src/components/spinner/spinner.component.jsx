@@ -1,8 +1,8 @@
 import "./spinner.styles.scss";
 
-const Spinner = () => {
+const Spinner = ({ theme }) => {
   return (
-    <div className="spinner-container">
+    <div className={`spinner-container ${theme ? "dark" : ""}`}>
       <div className="spinner" />
     </div>
   );

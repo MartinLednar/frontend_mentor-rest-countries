@@ -29,10 +29,8 @@ const CountryPage = () => {
     setCountry(newCountry);
   }, [id, countries]);
 
-  console.log(country);
-
   return (
-    <div className="country-container">
+    <main className="country-container">
       <CustomLink path="/" theme={theme}>
         <ChevronLeft /> Back
       </CustomLink>
@@ -104,9 +102,9 @@ const CountryPage = () => {
           </div>
         </div>
       ) : (
-        <Spinner />
+        <Spinner theme={theme} />
       )}
-    </div>
+    </main>
   );
 };
 

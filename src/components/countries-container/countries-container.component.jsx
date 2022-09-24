@@ -24,7 +24,7 @@ const CountriesContainer = ({ data }) => {
           )}
         </Fragment>
       ) : (
-        <Spinner />
+        <Spinner theme={theme} />
       )}
     </Fragment>
   );

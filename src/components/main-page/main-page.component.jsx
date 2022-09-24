@@ -68,7 +68,7 @@ const MainPage = () => {
         <CustomSelect theme={theme} selectTitle="Filter by Region" options={selectOptions} changeFilter={handleChange} />
       </div>
 
-      {countries ? <CountriesContainer data={filteredCountries} /> : <Spinner />}
+      {countries ? <CountriesContainer data={filteredCountries} /> : <Spinner theme={theme} />}
     </main>
   );
 };
