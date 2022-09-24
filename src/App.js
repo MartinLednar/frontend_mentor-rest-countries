@@ -24,7 +24,7 @@ function App() {
     };
 
     getCountries();
-  }, []);
+  }, [setCountries]);
 
   return (
     <div className={`app-container ${theme && "dark"}`}>

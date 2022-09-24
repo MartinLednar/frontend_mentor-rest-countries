@@ -14,11 +14,10 @@ const CountryPage = () => {
   const { countries } = useContext(CountriesContext);
   const { theme } = useContext(ThemeContext);
 
-  const getCountry = (id) => countries.filter((country) => country.alpha3Code === id)[0];
-
-  const getNeighbours = ({ borders }) => countries.filter((country) => borders.includes(country.alpha3Code));
-
   useEffect(() => {
+    const getCountry = (id) => countries.filter((country) => country.alpha3Code === id)[0];
+
+    const getNeighbours = ({ borders }) => countries.filter((country) => borders.includes(country.alpha3Code));
     if (!countries) return;
     const newCountry = getCountry(id);
 
